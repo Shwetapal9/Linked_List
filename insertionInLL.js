@@ -18,14 +18,15 @@ class LL {
     node.next = this.head;
     this.head = node;
   }
-  // size() {
-  //   let count = 0;
-  //   let curr = this.head;
-  //   while (curr) {
-  //     count++;
-  //     curr = curr.next;
-  //   }
-  // }
+  size() {
+    let count = 0;
+    let curr = this.head;
+    while (curr) {
+      count++;
+      curr = curr.next;
+    }
+    return count;
+  }
   printLL() {
     let curr = this.head;
     while (curr !== null) {
@@ -41,3 +42,4 @@ l1.insertAtStart(7);
 l1.insertAtStart(9);
 l1.insertAtStart(1);
 l1.printLL();
+console.log(l1.size());
